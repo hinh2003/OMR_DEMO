@@ -1,0 +1,92 @@
+ <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ListStudentAnswers" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <TextView
+        android:id="@+id/tv_total_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_below="@+id/imageView"
+        android:text="Chọn đáp án ở bên dưới"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_total_score"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:text="Câu"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_mid"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:text="Đáp án đúng"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:text="Phiếu trả lời"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/lv_student_answers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_select_another_image"
+        android:layout_below="@+id/linearLayout"/>
+
+    <Button
+        android:id="@+id/btn_select_another_image"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="20dp"
+        android:backgroundTint="#3F51B5"
+        android:padding="10dp"
+        android:text="Chụp phiếu trả lời khác"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+</RelativeLayout>
